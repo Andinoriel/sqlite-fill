@@ -53,14 +53,14 @@ int main(void) {
       days.push_back(start_date + TimeDelta(date::days(n)));
     }
     // O(n^2)
-    for (size_t n = 0; n < time_count; ++n) {
-      for (auto &&elem : days) {
+    for (auto &&elem : days) {
+      for (size_t n = 0; n < time_count; ++n) {
         hours.push_back(elem + TimeDelta(chrono::hours(n)));
       }
     }
     // O(n^2) + O(n^2)
-    for (size_t n = 0; n < 60; ++n) {
-      for (auto &&elem : hours) {
+    for (auto &&elem : hours) {
+      for (size_t n = 0; n < 60; ++n) {
         minutes.push_back(elem + TimeDelta(chrono::minutes(n)));
       }
     }
@@ -72,7 +72,7 @@ int main(void) {
     // total = O(n) + 5*O(n^2)
 
     for (auto &&elem : minutes) {
-      storage.insert(call{-1, elem.strftime("%y-%m-%d %H:%M:%S"), "0000000000",
+      storage.insert(call{-1, elem.strftime("%Y-%m-%d %H:%M:%S"), "0000000000",
                           100, "done"});
     }
     std::chrono::steady_clock::time_point end =
