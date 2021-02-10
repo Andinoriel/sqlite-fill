@@ -27,8 +27,8 @@
 // been invented (that would involve another several millennia of evolution).
 // We did not mean to shout.
 
-#include <date/date.h>
-#include <date/tz.h>
+#include <date/date.h> // andinoriel's fix
+#include <date/tz.h> // andinoriel's fix
 
 #include <iomanip>
 #include <cmath>
@@ -429,7 +429,7 @@ date::weekday Date::objweekday() const
 inline
 unsigned Date::weekday() const
 {
-    return (static_cast<unsigned>(objweekday().c_encoding()) - 1) % 7; // can do better
+    return (static_cast<unsigned>(objweekday().c_encoding()) - 1) % 7; // can do better // .c_encoding() andinoriel's fix
 }
 
 inline
