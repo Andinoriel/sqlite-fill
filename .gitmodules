@@ -1,0 +1,6 @@
+[submodule "extern/sqlite_orm"]
+	path = extern/sqlite_orm
+	url = https://github.com/fnc12/sqlite_orm.git
+[submodule "extern/date"]
+	path = extern/date
+	url = https://github.com/HowardHinnant/date.git
