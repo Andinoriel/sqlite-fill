@@ -6,17 +6,23 @@ This is a simple test of [sqlite_orm](https://github.com/fnc12/sqlite_orm) libra
 
 1. Clone this project and then cd to the project folder;
 
-2. Configure the project using CMake:
+2. Init the git submodules:
 ```
-cmake -B ./build -G <preferred generator>
-```
-
-3. Then run build command:
-```
-cmake --build ./build --config <Debug|Release>
+$ git submodule init
+$ git submodule update --init --recursive
 ```
 
-4. You've done! The builded binary file available in the build directory.
+3. Configure the project using CMake:
+```
+$ cmake -B ./build -G <preferred generator>
+```
+
+4. Then run build command:
+```
+$ cmake --build ./build --config <Debug|Release>
+```
+
+5. You've done! The builded binary file available in the build directory.
 
 ## Usage
 
